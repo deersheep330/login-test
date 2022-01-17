@@ -1,0 +1,27 @@
+# editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.icloud
+*.iml
+
+# gradle bins
+.gradle
+
+# compiling
+build
+archive
+
+# temp properties files
+buildNum.properties
+environment.properties
+signedUp.properties
+
+.classpath
+.project
+
+# npm
+node_modules

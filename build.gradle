@@ -1,0 +1,48 @@
+plugins {
+    id 'application'
+}
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// since there's no code in the default src/test/java folder
+// modify the target directory to src/main/java
+sourceSets {
+    test {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+// if we don't have this setup
+// by default all the test tasks would be executed automatically right after compiling
+// but we want to decide our own tasks-executing orders
+test {
+    exclude '**/*'
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'io.github.bonigarcia:webdrivermanager:4.2.0'
+    implementation 'junit:junit:4.12'
+    implementation 'io.cucumber:cucumber-java:5.4.0'
+    implementation 'io.cucumber:cucumber-junit:5.4.0'
+
+    implementation 'com.github.deersheep330:WebDriverWrapper:-SNAPSHOT'
+}
+
+task testLogin(type: Test) {
+    group = 'regression'
+    testLogging.showStandardStreams = true
+    ignoreFailures = true
+    include '**/LoginTestRunner.class'
+}
