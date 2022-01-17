@@ -29,6 +29,7 @@ Feature: Login Test
     When navigate to ig
     Then input username "nonexistent_username9c98c0b6-b340-46e7-9bac-458513e003b1"
     Then input password "valid_password"
+    Then click login
     # it should show incorrect username message
     # but sometimes it just show a general "couldn't connect to Instagram" message
     Then show error message
@@ -37,6 +38,7 @@ Feature: Login Test
     When navigate to ig
     Then input username "existing_username"
     Then input password "valid_password"
+    Then click login
     # it should show incorrect username message
     # but sometimes it just show a general "couldn't connect to Instagram" message
     Then show error message
@@ -46,4 +48,5 @@ Feature: Login Test
     When navigate to ig
     Then input username "correct_username"
     Then input password "correct_password"
+    Then click login
     Then login success

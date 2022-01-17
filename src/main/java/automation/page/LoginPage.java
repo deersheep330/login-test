@@ -37,6 +37,10 @@ public class LoginPage extends BasePage {
         op.waitFor(getElement("LoginDisabled"));
     }
 
+    public void clickLogin() {
+        op.click(getElement("Login"));
+    }
+
     public void showErrorMessage() {
         op.waitFor(getElement("ErrorMessage"));
     }

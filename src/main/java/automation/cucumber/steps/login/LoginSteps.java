@@ -28,6 +28,11 @@ public class LoginSteps extends BaseSteps {
         loginPage.cannotClickLogin();
     }
 
+    @Then("click login")
+    public void clickLogin() {
+        loginPage.clickLogin();
+    }
+
     @Then("show error message")
     public void showErrorMessage() {
         loginPage.showErrorMessage();
