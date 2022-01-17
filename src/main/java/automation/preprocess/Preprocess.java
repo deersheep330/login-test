@@ -8,7 +8,7 @@ public class Preprocess {
     public static WebDriver setupWebDriverWrapper() {
         WebDriverWrapper wrapper = WebDriverWrapper.getInstance();
         wrapper.setPageLoadTimeoutInSec(30);
-        wrapper.addRemoteNode("remote", "http://10.60.92.158:4444");
+        wrapper.addRemoteNode("remote", "http://localhost:4444");
         return wrapper.getInstance().getWebDriver("Chrome", "remote");
     }
 
