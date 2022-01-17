@@ -4,7 +4,9 @@ Simple Instagram login test using Selenium + Cucumber.
 
 ## Getting Started
 
-#### Step 1: Modify the Selenium server address.
+#### Step 1: Make sure you have Java installed on your machine.
+
+#### Step 2: Modify the Selenium server address.
 
 In src/main/java/preprocess/Preprocess.java, modify the remote address to the address of your selenium server. e.g.:
 
@@ -12,7 +14,7 @@ In src/main/java/preprocess/Preprocess.java, modify the remote address to the ad
 wrapper.addRemoteNode("remote", "http://localhost:4444");
 ```
 
-#### Step 2: Provide a correct username and password pair for the positive testcase.
+#### Step 3: Provide a correct username and password pair for the positive testcase.
 
 In src/main/resources/features/LoginTest/LoginTest.feature, modify the "correct_username" and "correct_password" of Scenario: Correct Username And Password Pair to a username/password pair that can really login Instagram. e.g.: 
 
@@ -25,13 +27,13 @@ In src/main/resources/features/LoginTest/LoginTest.feature, modify the "correct_
     Then login success
 ```
 
-#### Step 3: Execute the test with Gradle.
+#### Step 4: Execute the test with Gradle.
 
 ```
 gradlew clean build testLogin
 ```
 
-#### Step 4: View the test report.
+#### Step 5: View the test report.
 
 After the test executed, a Cucumber test report would be generated in build/test-results/cucumber/LoginTest/index.html.
 
