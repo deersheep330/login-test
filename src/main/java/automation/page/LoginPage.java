@@ -39,6 +39,8 @@ public class LoginPage extends BasePage {
 
     public void clickLogin() {
         op.click(getElement("Login"));
+        // wait for response
+        op.sleep(3000);
     }
 
     public void showErrorMessage() {
