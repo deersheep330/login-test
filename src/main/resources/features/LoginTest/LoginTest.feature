@@ -1,8 +1,8 @@
 Feature: Login Test
 
-#  Scenario: Normal Username And Password
-#    Given on login page
-#    Then input username and password
+  Scenario: Normal Username And Password
+    Given on login page
+    Then simple input username and password
 
   Scenario: Parameterized Username And Password
     Given on login page

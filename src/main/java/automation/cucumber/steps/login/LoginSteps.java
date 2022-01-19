@@ -18,8 +18,8 @@ public class LoginSteps extends BaseSteps {
         System.out.println("==> on login page");
     }
 
-    @Then("input username and password")
-    public void inputUsernameAndPassword() {
+    @Then("simple input username and password")
+    public void simpleInputUsernameAndPassword() {
         System.out.println("==> try to login but username/password should be provided");
     }
 
