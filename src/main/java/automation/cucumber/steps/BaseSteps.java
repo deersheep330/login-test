@@ -12,9 +12,6 @@ public abstract class BaseSteps {
     protected LoginPage loginPage;
 
     public BaseSteps() {
-        context = TestContext.getInstance();
-        driver = context.getDriver();
-        loginPage = context.getLoginPage();
     }
 
 }

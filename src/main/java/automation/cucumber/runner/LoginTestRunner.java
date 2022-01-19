@@ -23,23 +23,11 @@ public class LoginTestRunner {
 
     @BeforeClass
     public static void setUp() {
-
         System.out.println("===> BeforeClass setUp");
-
-        WebDriver driver = Preprocess.setupWebDriverWrapper();
-        LoginPage loginPage = LoginPageFactory.getLoginPage(driver);
-
-        TestContext context = TestContext.getInstance();
-
-        context.setDriver(driver);
-        context.setLoginPage(loginPage);
     }
 
     @AfterClass
     public static void tearDown() {
-        if (TestContext.getInstance().getLoginPage() != null) {
-            TestContext.getInstance().getDriver().quit();
-        }
         System.out.println("===> AfterClass tearDown");
     }
 

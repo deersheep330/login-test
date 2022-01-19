@@ -18,16 +18,6 @@ public class LoginSteps extends BaseSteps {
         System.out.println("==> on login page");
     }
 
-    
-
-    @After
-    public void afterScenario(Scenario scenario) {
-        if (scenario.isFailed()) {
-            loginPage.getOperation().screenshotAndEmbedInCucumberReport(scenario);
-        }
-    }
-
-
     @Then("input username {string} and password {string}")
     public void inputUsernameAndPassword(String arg0, String arg1) {
         System.out.println("login with username: " + arg0 + ", password: " + arg1);
@@ -39,6 +29,5 @@ public class LoginSteps extends BaseSteps {
         for (Map<String, String> data : list) {
             System.out.println("login with username: " + data.get("username") + ", password: " + data.get("password"));
         }
-
     }
 }
